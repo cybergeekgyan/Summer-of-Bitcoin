@@ -48,11 +48,11 @@ If you want to test Environment you can run `python test_env.py`
 ## How It Works
 There are two major components in the Project: 
 
-* **Custom environment**: The main time and effort to develop this project comes from designing a custom environment where the agents can do space exploration and with this we can solve this problem as a reinforcement learning task. This environment is implemented as a session in [env.py](BTC_mining_fees_optimization_RL/env.py). To describe the environment **if the agent chooses a transaction which could decrease the Running Average of Total Aggregated Fees** then my environment will award a score of **-1** else the agent will get a reward of **+1**. 
+* **Custom environment**: The main time and effort to develop this project comes from designing a custom environment where the agents can do space exploration and with this we can solve this problem as a reinforcement learning task. This environment is implemented as a session in [env.py](https://github.com/gyanprakash0221/Summer-of-Bitcoin/blob/main/env.py). To describe the environment **if the agent chooses a transaction which could decrease the Running Average of Total Aggregated Fees** then my environment will award a score of **-1** else the agent will get a reward of **+1**. 
 * Keeping the total weight of transaction less than `4,000,000`.
 * Also the action the agent can take is either to select a transaction or not depending on the rewards condition.
 
-* **Reinforcement Learning Algorithms**: Here I employs an *Proximal Policy Optimization (PPO)* to navigate the environment searching for the best optimization at a given state. It is implemented in [PPO.py](BTC_mining_fees_optimization_RL/PPO.py). Also i have used *Deep Q Learning (DQN)* to create a comparitive study with the PPO algorithm. In my experiments PPO out performed DQN with a Good margin.
+* **Reinforcement Learning Algorithms**: Here I employs an *Proximal Policy Optimization (PPO)* to navigate the environment searching for the best optimization at a given state. It is implemented in [PPO.py](https://github.com/gyanprakash0221/Summer-of-Bitcoin/blob/main/ppo.py). Also i have used *Deep Q Learning (DQN)* to create a comparitive study with the PPO algorithm. In my experiments PPO out performed DQN with a Good margin.
 * All of these Models are created with *stable_baselines3* modules for fast prototyping and its fairly a very good project to create a RL based MVP.
 
 For more details on the inner-workings of the framework, see in [this article on PPO](https://openai.com/blog/openai-baselines-ppo) and [in this documentation on DQN](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html)
